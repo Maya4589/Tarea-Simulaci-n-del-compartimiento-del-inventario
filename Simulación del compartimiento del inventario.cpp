@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS // Para evitar advertencias en Visual Studio
+
 
 #include <cstdio>
 #include <vector>
@@ -11,7 +11,7 @@ struct Producto {
     float precio;
 };
 
-// ===== PROTOTIPOS DE FUNCIONES =====
+//PROTOTIPOS DE FUNCIONES
 void mostrarMenu();
 int buscarProducto(const std::vector<Producto>& inventario, int codigoBusqueda);
 void agregarProducto(std::vector<Producto>& inventario);
@@ -20,9 +20,9 @@ void actualizarCantidad(std::vector<Producto>& inventario);
 void generarReporteBajoInventario(const std::vector<Producto>& inventario);
 void simularVenta(std::vector<Producto>& inventario);
 
-// ===== FUNCIÓN PRINCIPAL =====
+//  FUNCIÓN PRINCIPAL 
 int main() {
-    // Inicializamos el inventario de prueba para GadgetXpress tal como lo tenías
+    
     std::vector<Producto> inventario = {
         {101, "Laptop Gamer", 10, 1500.50f},
         {102, "Mouse Inalambrico", 25, 20.00f},
@@ -54,7 +54,7 @@ int main() {
                 generarReporteBajoInventario(inventario);
                 break;
             case 5:
-                simularVenta(inventario); // Tu función de simulación
+                simularVenta(inventario); //funcion de simulacion 
                 break;
             case 6:
                 printf("\nSaliendo de la Consola Administrativa. ¡Hasta pronto!\n");
@@ -68,7 +68,7 @@ int main() {
     return 0;
 }
 
-// ===== INTERFAZ DEL MENÚ =====
+// INTERFAZ DEL MENÚ 
 void mostrarMenu() {
     printf("\n=====================================\n");
     printf("  CONSOLA ADMINISTRATIVA GadgetXpress\n");
@@ -83,7 +83,7 @@ void mostrarMenu() {
     printf("Ingrese una opcion: ");
 }
 
-// 2. Función de búsqueda reutilizada (Tu lógica original)
+// 2. Función de búsqueda reutilizada evidencia 5
 int buscarProducto(const std::vector<Producto>& inventario, int codigoBusqueda) {
     for (size_t i = 0; i < inventario.size(); ++i) {
         if (inventario[i].codigo == codigoBusqueda) {
@@ -93,7 +93,7 @@ int buscarProducto(const std::vector<Producto>& inventario, int codigoBusqueda) 
     return -1; // Producto no encontrado
 }
 
-// ===== FUNCIONALIDAD 1: AGREGAR PRODUCTO =====
+//  FUNCIONALIDAD 1: AGREGAR PRODUCTO 
 void agregarProducto(std::vector<Producto>& inventario) {
     Producto nuevo;
     printf("\n--- AGREGAR NUEVO PRODUCTO ---\n");
@@ -119,7 +119,7 @@ void agregarProducto(std::vector<Producto>& inventario) {
     printf("[EXITO] Producto registrado correctamente.\n");
 }
 
-// ===== FUNCIONALIDAD 2: LISTAR INVENTARIO =====
+//FUNCIONALIDAD 2: LISTAR INVENTARIO 
 void listarInventario(const std::vector<Producto>& inventario) {
     printf("\n--- INVENTARIO COMPLETO GADGETXPRESS ---\n");
     if (inventario.empty()) {
@@ -133,7 +133,7 @@ void listarInventario(const std::vector<Producto>& inventario) {
     }
 }
 
-// ===== FUNCIONALIDAD 3: ACTUALIZAR CANTIDAD =====
+//  FUNCIONALIDAD 3: ACTUALIZAR CANTIDAD 
 void actualizarCantidad(std::vector<Producto>& inventario) {
     int codigoBusqueda, nuevaCantidad;
     printf("\n--- ACTUALIZAR CANTIDAD (REABASTECIMIENTO) ---\n");
@@ -154,7 +154,7 @@ void actualizarCantidad(std::vector<Producto>& inventario) {
     }
 }
 
-// ===== FUNCIONALIDAD 4: REPORTE DE BAJO INVENTARIO =====
+// FUNCIONALIDAD 4: REPORTE DE BAJO INVENTARIO 
 void generarReporteBajoInventario(const std::vector<Producto>& inventario) {
     const int UMBRAL_MINIMO = 5;
     bool alertas = false;
@@ -174,7 +174,7 @@ void generarReporteBajoInventario(const std::vector<Producto>& inventario) {
     }
 }
 
-// 3. Paso 1: Tu función de simulación de venta (Original intacta)
+// 3.función de simulación de venta 
 void simularVenta(std::vector<Producto>& inventario) {
     int codigoVenta, cantidadVenta;
 
